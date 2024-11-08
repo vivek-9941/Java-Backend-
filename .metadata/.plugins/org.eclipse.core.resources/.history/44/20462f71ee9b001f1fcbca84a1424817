@@ -1,0 +1,8 @@
+package mappingrealtion;
+
+public class App {
+	laptop lap=  new laptop();
+	lap.setLid(101);
+	lap.setLname("dell");
+	
+}

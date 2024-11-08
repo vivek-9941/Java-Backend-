@@ -1,0 +1,7 @@
+package mappingrealtion;
+
+public class App {
+	laptop lap=  new laptop();
+
+	
+}

@@ -1,0 +1,7 @@
+<classpath>
+  <container id="DemoJSP!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/PROGRAMS/DEVELOPEMENT TOOLS/JSTL JAR/javax.servlet-api-3.0.1.jar">
+      <source-attachment-path>/DemoJSP</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

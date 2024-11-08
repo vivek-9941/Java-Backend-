@@ -1,0 +1,34 @@
+package mappingrealtion;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+import jakarta.transaction.Transaction;
+
+public class App {
+	public static void main() {
+		laptop lap=  new laptop();
+		lap.setLid(101);
+		lap.setLname("dell");
+		
+		student s = new student();
+		s.setName("vivek");
+		s.setMarks(100);
+		s.setRollno(3);
+		
+		Configuration configuration = new Configuration().configure().addAnnotatedClass(laptop.class).addAnnotatedClass(student.class);
+		
+		SessionFactory sFactory = configuration.buildSessionFactory();
+		
+		Session session = sFactory.openSession();
+		Transaction trx = session.beginTransaction();
+		session.save(lap);
+		session.save(s);
+		trx.commit();
+		
+		
+	}
+	
+}
